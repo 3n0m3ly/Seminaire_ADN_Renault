@@ -1,0 +1,196 @@
+/* Styles généraux */
+body {
+  font-family: 'Arial', sans-serif;
+  line-height: 1.6;
+  margin: 0;
+  padding: 0;
+  background-color: black;
+  color: #333;
+  
+  .justifie {
+            text-align: justify;
+        }
+
+  /* Image de fond */
+  background-image: url('voiture_flou_leg.jpg'); 
+  background-size: cover; 
+  background-position: center; 
+  background-repeat: no-repeat; 
+  background-attachment: fixed; 
+  mage-rendering: crisp-edges; 
+  image-rendering: -webkit-optimize-contrast; 
+}
+
+
+
+/* Main Content */
+main {
+  padding: 2rem 1rem;
+  max-width: 800px;
+  margin: auto;
+  background: white;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  border-radius: 8px;
+}
+
+/* Header */
+main h1 {
+  background-image: url('Logo_renault.png');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  color: white;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+  padding: 20px;
+  border-radius: 10px;
+  height: 200px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 3rem; 
+  font-weight: bold; 
+  background-color: yellow; 
+  text-align: center; 
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3); 
+  margin: 0;
+  text-transform: uppercase; 
+  letter-spacing: 6px; 
+  position: relative;
+}
+
+main h3 {
+  color: black;
+  text-align: center;
+  
+  
+}
+
+.expert {
+    display: flex;
+    align-items: center;
+    margin-bottom: 30px;
+}
+
+.expert-image {
+    margin-right: 20px;
+}
+
+.expert-info {
+    flex: 1;
+}
+
+.expert img {
+    border-radius: 50%; 
+    width: 170px; 
+    height: auto;
+}
+
+
+/* Embellissement des noms des experts */
+h3 {
+  font-size: 1.6rem; 
+  font-weight: bold; 
+  color: yellow; 
+  text-transform: uppercase; 
+  letter-spacing: 2px; 
+  position: relative; /* Pour pouvoir utiliser la pseudo-classe ::after */
+  margin-bottom: 10px; /* Espacement sous le nom */
+  padding-bottom: 5px; /* Un peu de marge en bas pour faire de la place à la ligne décorative */
+  transition: color 0.3s ease, transform 0.3s ease; /* Effet fluide */
+}
+
+h3:hover {
+  color: black; /* Change la couleur au survol */
+  transform: scale(1.05); /* Agrandit légèrement le texte */
+}
+
+h3::after {
+  content: "";
+  position: absolute;
+  bottom: 0; /* Place la ligne directement sous le texte */
+  left: 0;
+  width: 100%; /* Largeur de la ligne égale à celle du texte */
+  height: 3px; /* Hauteur de la ligne */
+  background-color: yellow; /* Couleur de la ligne */
+  transform: scaleX(0); /* Masquer la ligne par défaut */
+  transition: transform 0.3s ease; /* Effet fluide */
+}
+
+h3:hover::after {
+  transform: scaleX(1); /* La ligne apparaît lorsqu'on survole le texte */
+}
+
+
+section h2 {
+    font-size: 2rem; /* Taille de la police */
+    font-weight: bold; /* Gras pour plus de présence */
+    color: black; /* Couleur du texte */
+    background-color: yellow; /* Couleur de fond */
+    padding: 10px 20px; /* Espacement interne autour du texte */
+    border-radius: 8px; /* Coins arrondis */
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Ombre subtile pour un effet 3D */
+    text-align: center; /* Centre le texte */
+    margin-bottom: 20px; /* Espacement sous le titre */
+    position: relative; /* Pour pouvoir ajouter des éléments positionnés */
+}
+
+
+section h2::after {
+    content: "";
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 50%;
+    height: 3px; /* Épaisseur de la ligne */
+    background-color: black; /* Couleur de la ligne */
+}
+
+
+/* Footer */
+footer {
+  text-align: center;
+  padding: 1rem 0;
+  background: #333;
+  color: white;
+  margin-top: 2rem;
+  font-size: 0.9rem;
+}
+
+/* Toggle Button */
+.toggle-button {
+  background: #0056A4;
+  color: white;
+  border: none;
+  padding: 0.5rem 1rem;
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 1rem;
+  transition: background 0.3s ease;
+}
+
+.toggle-button:hover {
+  background: #004080;
+}
+
+/* Script Section */
+.script-content {
+  display: none;
+  background: #f5f5f5;
+  padding: 1rem;
+  border-left: 4px solid #0056A4;
+  border-radius: 4px;
+  font-style: italic;
+  line-height: 1.8;
+  color: #555;
+  margin-top: 1rem;
+  transition: all 0.3s ease;
+}
+
+/* Audio Player */
+audio {
+  width: 100%;
+  margin-top: 1rem;
+  outline: none;
+}
+
+
