@@ -6,10 +6,6 @@ body {
   padding: 0;
   background-color: black;
   color: #333;
-  
-  .justifie {
-            text-align: justify;
-        }
 
   /* Image de fond */
   background-image: url('voiture_flou_leg.jpg'); 
@@ -17,11 +13,14 @@ body {
   background-position: center; 
   background-repeat: no-repeat; 
   background-attachment: fixed; 
-  mage-rendering: crisp-edges; 
-  image-rendering: -webkit-optimize-contrast; 
+  image-rendering: crisp-edges; 
+  -webkit-image-rendering: -webkit-optimize-contrast; 
 }
 
-
+/* Justification du texte */
+.justifie {
+  text-align: justify;
+}
 
 /* Main Content */
 main {
@@ -61,30 +60,28 @@ main h1 {
 main h3 {
   color: black;
   text-align: center;
-  
-  
 }
 
+/* Expert Section */
 .expert {
-    display: flex;
-    align-items: center;
-    margin-bottom: 30px;
+  display: flex;
+  align-items: center;
+  margin-bottom: 30px;
 }
 
 .expert-image {
-    margin-right: 20px;
+  margin-right: 20px;
 }
 
 .expert-info {
-    flex: 1;
+  flex: 1;
 }
 
 .expert img {
-    border-radius: 50%; 
-    width: 170px; 
-    height: auto;
+  border-radius: 50%; 
+  width: 170px; 
+  height: auto;
 }
-
 
 /* Embellissement des noms des experts */
 h3 {
@@ -120,31 +117,29 @@ h3:hover::after {
   transform: scaleX(1); /* La ligne apparaît lorsqu'on survole le texte */
 }
 
-
+/* Titre des sections */
 section h2 {
-    font-size: 2rem; /* Taille de la police */
-    font-weight: bold; /* Gras pour plus de présence */
-    color: black; /* Couleur du texte */
-    background-color: yellow; /* Couleur de fond */
-    padding: 10px 20px; /* Espacement interne autour du texte */
-    border-radius: 8px; /* Coins arrondis */
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Ombre subtile pour un effet 3D */
-    text-align: center; /* Centre le texte */
-    margin-bottom: 20px; /* Espacement sous le titre */
-    position: relative; /* Pour pouvoir ajouter des éléments positionnés */
+  font-size: 2rem; /* Taille de la police */
+  font-weight: bold; /* Gras pour plus de présence */
+  color: black; /* Couleur du texte */
+  background-color: yellow; /* Couleur de fond */
+  padding: 10px 20px; /* Espacement interne autour du texte */
+  border-radius: 8px; /* Coins arrondis */
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Ombre subtile pour un effet 3D */
+  text-align: center; /* Centre le texte */
+  margin-bottom: 20px; /* Espacement sous le titre */
+  position: relative; /* Pour pouvoir ajouter des éléments positionnés */
 }
-
 
 section h2::after {
-    content: "";
-    position: absolute;
-    bottom: 0;
-    left: 0;
-    width: 50%;
-    height: 3px; /* Épaisseur de la ligne */
-    background-color: black; /* Couleur de la ligne */
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 50%;
+  height: 3px; /* Épaisseur de la ligne */
+  background-color: black; /* Couleur de la ligne */
 }
-
 
 /* Footer */
 footer {
@@ -193,4 +188,85 @@ audio {
   outline: none;
 }
 
+/* --- Responsiveness for mobile devices --- */
+@media (max-width: 768px) {
+  body {
+    background-attachment: scroll; /* Désactive le fond fixe sur petits écrans */
+  }
 
+  main {
+    padding: 1rem;
+    max-width: 100%;
+  }
+
+  main h1 {
+    font-size: 2.5rem;
+    height: 150px;
+  }
+
+  h3 {
+    font-size: 1.4rem;
+  }
+
+  .expert {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .expert img {
+    width: 120px;
+    margin-bottom: 15px;
+  }
+
+  section h2 {
+    font-size: 1.8rem;
+    padding: 10px;
+  }
+
+  footer {
+    font-size: 0.8rem;
+  }
+
+  .toggle-button {
+    padding: 0.5rem 0.8rem;
+    font-size: 0.9rem;
+  }
+
+  .script-content {
+    padding: 1rem 0.5rem;
+  }
+}
+
+/* --- Responsiveness for smaller mobile devices --- */
+@media (max-width: 480px) {
+  main h1 {
+    font-size: 2rem;
+    height: 120px;
+  }
+
+  h3 {
+    font-size: 1.2rem;
+  }
+
+  section h2 {
+    font-size: 1.6rem;
+    padding: 8px;
+  }
+
+  footer {
+    font-size: 0.7rem;
+  }
+
+  .expert img {
+    width: 100px;
+  }
+
+  .toggle-button {
+    padding: 0.4rem 0.7rem;
+    font-size: 0.8rem;
+  }
+
+  .script-content {
+    padding: 1rem 0.3rem;
+  }
+}
